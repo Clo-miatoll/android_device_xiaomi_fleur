@@ -77,6 +77,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
     'vendor/lib64/libmnl_mtk.so': blob_fixup()
         .add_needed('libcutils.so'),
+    ('vendor/lib64/libcodec2_mtk_vdec.so', 'vendor/lib64/libcodec2_mtk_venc.so'): blob_fixup()
+        .replace_needed('libformatter.so', 'libformatter_mtk'),
     (
         'vendor/lib/libteei_daemon_vfs.so',
         'vendor/lib64/libteei_daemon_vfs.so',
