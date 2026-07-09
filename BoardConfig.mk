@@ -139,6 +139,7 @@ BOOT_SECURITY_PATCH := 2024-12-01
 VENDOR_SECURITY_PATCH := 2024-12-01
 
 # SEPolicy
+include device/lineage/sepolicy/libion/sepolicy.mk
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
